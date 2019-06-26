@@ -6,7 +6,7 @@ This is the code for a basic homebridge plugin and a python server. By running b
 
 Obviously the Automation HAT is capable of much more and this project is a good start for more abitious home automation projects. Remember don't use the Automation HAT to directly switch mains electricity! 
 
-![](screenshot.png)
+![](Screenshot.png)
 
 ## Installation
 
