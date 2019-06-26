@@ -1,0 +1,14 @@
+{
+    "name": "homebridge-my-switch-plugin",
+    "version": "1.0.0",
+    "main": "index.js",
+    "keywords": [
+        "homebridge-plugin"
+    ],
+    "engines": {
+        "homebridge": ">=0.2.5"
+    },
+    "dependencies": {
+        "request": "^2.88.0"
+    }
+}
