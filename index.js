@@ -24,13 +24,14 @@ mySwitch.prototype = {
         },
         function (error, response, body) {
             if (error) {
-                if (response){
+                if (response) {
                     me.log('STATUS: ' + response)
                     me.log(error)
                     return next(error)
                 }
             }
-            return next(null, body.currentState)
+            var parsedObj = JSON.parse(body)
+            return next(null, parsedObj.currentState)
         })
     },
 
@@ -48,7 +49,7 @@ mySwitch.prototype = {
         },
         function (error, response) {
             if (error) {
-                if (response){
+                if (response) {
                     me.log('STATUS: ' + response)
                     me.log(error)
                     return next(error)
