@@ -10,24 +10,13 @@ from flask import Flask, jsonify, make_response, request
 app = Flask(__name__)
 
 def switchOn() :
-	if automationhat.is_automation_hat():
-		automationhat.relay.one.on()
-		return True
-	else:
-		return False
+	automationhat.relay.one.on()
 
 def switchOff() :
-	if automationhat.is_automation_hat():
-		automationhat.relay.one.off()
-		return True
-	else:
-		return False
+	automationhat.relay.one.off()
 
 def getStatus() :
-	if automationhat.relay.one.is_on():
-		return True
-	else:
-		return False
+	return automationhat.relay.one.is_on()
 
 @app.route('/api/status', methods=['GET'])
 def status() :
@@ -37,14 +26,11 @@ def status() :
 def order() :
 	content = request.json
 	targetState = content.get('targetState', '')
-	print(targetState)
 	if targetState == True :
 		switchOn()
-		print('on')
 	else:
 		switchOff()
-		print('off')
-	return jsonify({'currentState': getStatus() })
+	return make_response( jsonify({'currentState': getStatus() }) )
 
 
 @app.errorhandler(404)
