@@ -14,8 +14,7 @@ Obviously the Automation HAT is capable of much more and this project is a good 
 2. Install the [Automation (p)HAT](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-automation-hat-and-phat)
 3. Install [Homebridge](https://github.com/nfarina/homebridge/wiki/Running-HomeBridge-on-a-Raspberry-Pi)
 4. Add homebridge as an accessory in your home app on IOS
-4. Open a terminal and clone this repository 
-```git clone https://github.com/dropletmedia/homebridge-automation-hat.git
+4. Open a terminal and clone this repository ```git clone https://github.com/dropletmedia/homebridge-automation-hat.git
 ```
 5. move or copy the ```config.json``` file into your ```home/pi/.homebridge``` folder.
 6. Make sure flask is installed 
